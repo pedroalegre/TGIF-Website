@@ -1,0 +1,46 @@
+/* Congress pages */
+header {
+	background: url(pictures/HR2.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+#tgifLogo {
+	width: 150px;
+}
+
+.emailContainer {
+	height: 150px;
+	line-height: 150px;
+	text-align: right;
+}
+
+.emailContainer a {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#dropMenu:hover {
+	background-color: #e7e7e7;
+}
+
+p:first-letter {
+	margin-left: 15px;
+}
+
+#houseSeal {
+	max-width: 350px;
+}
+
+#footerText {
+	text-align: center;
+}
+
+#memberHead {
+	border-top: 2px solid #ddd;
+}
+
+/* Attendance pages */
+#senateGlance {
+	margin-top: 20px;
+}

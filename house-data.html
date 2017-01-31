@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Senate</title>
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-9">
+					<img src="TGIF_logo.png" alt="TGIF Logo" id="tgifLogo">
+				</div>
+				<div class="col-xs-3 emailContainer">
+					<a href="mailto:info@tgif.net">info@tgif.net</a>
+				</div>
+			</div>
+		</div>
+	</header>
+  <body class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="home.html">Home</a></li>
+					<li class="dropdown active">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="active"><a href="#">House</a></li>
+							<li><a href="senate-data.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-attendance.html">House</a></li>
+							<li><a href="senate-attendance.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-loyalty.html">House</a></li>
+							<li><a href="senate-loyalty.html">Senate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-sm-8">
+				<h2>Congressmen</h2>
+				<p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+				<p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative.</p>
+			</div>
+			<div class="col-sm-4 pull-right" id="houseSeal">
+				<img class="img-responsive img-thumbnail" src="pictures/Trump.jpg" alt="House of Representatives Seal">
+			</div>
+		</div>
+		<form class="form">
+			<div class="checkbox" id="checkboxes">
+				<label for="finterStatus">Filter by Party: </label>
+				<label><input type="checkbox" name="filterStatus" id="R" value="R"> Republican</label>
+				<label><input type="checkbox" name="filterStatus" id="D" value="D"> Democrat</label>
+				<label><input type="checkbox" name="filterStatus" id="I" value="I"> Independent</label>
+			</div>
+			<div class="dropdownStates">
+				<label for="filterState">Filter by State: </label>
+				<select name="filterStates" id="filterState" class="filter">
+					<option value="allStates">All</option>
+				</select>
+			</div>
+		</form>
+		<table class="table table-hover">
+			<thead id="memberHead">
+
+			</thead>
+			<tbody id="memberBody">
+
+			</tbody>
+		</table>
+		<footer>
+				<pre id="footerText">2016 TGIF | All Rights Reserved</pre>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="NYT-congress-113-house.js"></script>
+		<script src="senators.js"></script>
+  </body>
+</html>

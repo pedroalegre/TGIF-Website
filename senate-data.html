@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Senate</title>
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-9">
+					<img src="TGIF_logo.png" alt="TGIF Logo" id="tgifLogo">
+				</div>
+				<div class="col-xs-3 emailContainer">
+					<a href="mailto:info@tgif.net">info@tgif.net</a>
+				</div>
+			</div>
+		</div>
+	</header>
+  <body class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="home.html">Home</a></li>
+					<li class="dropdown active">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-data.html">House</a></li>
+							<li class="active"><a href="#">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-attendance.html">House</a></li>
+							<li><a href="senate-attendance.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-loyalty.html">House</a></li>
+							<li><a href="senate-loyalty.html">Senate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-sm-8">
+				<h2>Senators</h2>
+				<p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.</p>
+			</div>
+			<div class="col-sm-4 pull-right" id="houseSeal">
+				<img class="img-responsive img-thumbnail" src="pictures/Clinton.jpg" alt="House of Representatives Seal">
+			</div>
+		</div>
+		<form class="form">
+			<div class="checkbox col-sm-7" id="checkboxes">
+				<label for="finterStatus">Filter by Party: </label>
+				<label><input type="checkbox" name="filterStatus" id="R" value="R"> Republican</label>
+				<label><input type="checkbox" name="filterStatus" id="D" value="D"> Democrat</label>
+				<label><input type="checkbox" name="filterStatus" id="I" value="I"> Independent</label>
+			</div>
+			<div class="dropdownStates col-sm1 pull-right">
+				<label for="filterState">Filter by State: </label>
+				<select name="filterStates" id="filterState" class="filter">
+					<option value="allStates">All</option>
+				</select>
+			</div>
+		</form>
+		<table class="table table-hover">
+			<thead id="memberHead">
+
+			</thead>
+			<tbody id="memberBody">
+
+			</tbody>
+		</table>
+		<footer>
+				<pre id="footerText">2016 TGIF | All Rights Reserved</pre>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="NYT-congress-113-senate.js"></script>
+		<script src="senators.js"></script>
+  </body>
+</html>

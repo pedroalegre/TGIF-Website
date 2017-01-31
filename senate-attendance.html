@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Senate Attendance</title>
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-9">
+					<img src="TGIF_logo.png" alt="TGIF Logo" id="tgifLogo">
+				</div>
+				<div class="col-xs-3 emailContainer">
+					<a href="mailto:info@tgif.net">info@tgif.net</a>
+				</div>
+			</div>
+		</div>
+	</header>
+    
+	<body class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="home.html">Home</a></li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-data.html">House</a></li>
+							<li><a href="senate-data.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown active">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-attendance.html">House</a></li>
+							<li class="active"><a href="#">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-loyalty.html">House</a></li>
+							<li><a href="senate-loyalty.html">Senate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!--
+		<table>
+			<script id="row-template" type="text/html">
+        <tr class="member-row">
+          <td>{{first}}</td>
+          <td>{{last}}</td>    <!-- placeholders are indicated with curly braces
+          <td>{{party}}</td>
+        </tr>
+      </script>
+		</table>
+		-->
+		
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Attendance</h2>
+				<p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+
+				<p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+			</div>
+			<div class="col-sm-6">
+				<h3 class="pull-right" id="senateGlance">Senate at a glance</h3>
+				<table class="col-sm-6 table table-hover">
+					<thead id="senateGlanceHead">
+						<script id="row-template" type="text/html">
+							<tr class="header-row">
+								<th>{{party}}</th>
+								<th>{{numReps}}</th>
+								<th>{{votesPct}}</th>
+							</tr>
+						</script>
+					</thead>
+					<tbody id="senateGlanceBody">
+						<script id="row-template" type="text/html">
+       			{{#members}}
+        			<tr class="member-row">
+								<td>{{party}}</td>
+								<td>{{count}}</td>
+								<td>{{averagePct}}</td>
+        			</tr>
+        			{{/members}}
+      			</script>
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<h3>Least Engaged (Bottom 10% Attendance)</h3>
+				<table class="col-sm-6 table table-hover" id="senateLeastEngaged">
+					<thead id="senateLeastEngagedHead">
+						<script id="row-template" type="text/html">
+							<tr class="member-row">
+								<td>{{name}}</td>
+								<td>{{partyVotes}}</td>
+								<td>{{votesPct}}</td>
+							</tr>
+						</script>
+					</thead>
+					<tbody id="senateLeastEngagedBody">
+						<script id="row-template" type="text/html">
+							<tr class="member-row">
+								<td>{{name}}</td>
+								<td>{{partyVotes}}</td>
+								<td>{{votesPct}}</td>
+							</tr>
+						</script>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				<h3>Most Engaged (Top 10% Attendance)</h3>
+				<table class="col-sm-6 table table-hover" id="senateMostEngaged">
+					<thead id="senateMostEngagedHead">
+						
+					</thead>
+					<tbody id="senateMostEngagedBody">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+			
+		<footer>
+			<pre id="footerText">2016 TGIF | All Rights Reserved</pre>
+		</footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="NYT-congress-113-senate.js"></script>
+		<script src="senate-test.js"></script>
+		<script src="attendance.js"></script>
+	</body>
+</html>

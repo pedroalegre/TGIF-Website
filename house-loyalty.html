@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Senate Attendance</title>
+		<link rel="stylesheet" href="main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-9">
+					<img src="TGIF_logo.png" alt="TGIF Logo" id="tgifLogo">
+				</div>
+				<div class="col-xs-3 emailContainer">
+					<a href="mailto:info@tgif.net">info@tgif.net</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<body class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<ul class="nav navbar-nav">
+					<li><a href="home.html">Home</a></li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Congress 113
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-data.html">House</a></li>
+							<li><a href="senate-data.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Attendance
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="house-attendance.html">House</a></li>
+							<li><a href="senate-attendance.html">Senate</a></li>
+						</ul>
+					</li>
+					<li class="dropdown active">
+						<a id="dropMenu" class="dropdown-toggle" data-toggle="dropdown" href="#">Party Loyalty
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li class="active"><a href="house-loyalty.html">House</a></li>
+							<li><a href="senate-loyalty.html">Senate</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="row">
+			<div class="col-sm-6">
+				<h2>Party Loyalty</h2>
+				<p>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans respectively, tend to be the most faithful in voting for their party's nominee for office and legislation that backs their party's agenda.</p>
+			</div>
+			<div class="col-sm-6">
+				<h3 class="pull-right", id="senateGlance">Senate at a glance</h3>
+				<table class="col-sm-6 table table-hover">
+					<thead id="senateGlanceHead">
+						
+					</thead>
+					<tbody id="senateGlanceBody">
+						
+					</tbody>
+				</table>
+			</div>
+			
+		</div>
+    <div class="row">
+			<div class="col-sm-6">
+				<h3>Least Loyal (Bottom 10% of Party)</h3>
+				<table class="col-sm-6 table table-hover" id="senateLeastLoyal">
+					<thead id="senateLeastLoyalHead">
+						
+					</thead>
+					<tbody id="senateLeastLoyalBody">
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="col-sm-6">
+				<h3>Most Loyal (Top 10% of Party)</h3>
+				<table class="col-sm-6 table table-hover" id="senateMostLoyal">
+					<thead id="senateMostLoyalHead">
+						
+					</thead>
+					<tbody id="senateMostLoyalBody">
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+        
+		<footer>
+			<pre id="footerText">2016 TGIF | All Rights Reserved</pre>
+		</footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="NYT-congress-113-house.js"></script>
+		<script src="house-test.js"></script>
+		<script src="loyalty.js"></script>
+	</body>
+</html>
